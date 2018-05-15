@@ -1,29 +1,65 @@
+﻿
 <!DOCTYPE html>
 <html>
-    <head>
-    <!--
+
+<head>
+  <!--
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+  <script type="text/javascript" src="scripts/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+  <title>barcodeScannerApp</title>
+</head>
+
+<body>
+  <div data-role="page" data-title="Home" id="index">
+    <!-- header-->
+    <div data-role="header" data-position="fixed" data-fullscreen="true">
+      <h1>BarCodeApp</h1>
+    </div>
+    <!-- main-->
+    <div role="main" id="home" class="ui-content">
+      <a href="#" id="scanner" class="ui-btn ui-corner-all ui-shadow">Scanner</a>
+      <form>
+
+          <input type="search" name="search" id="search" value="">
+          <a href="#" id="google" class="ui-btn ui-corner-all ui-shadow">Google</a>
+
         
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>barcodeScannerApp</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+          <a href="#" id="browser" class="ui-btn ui-corner-all ui-shadow" >Open In Browser</a>
+
+
+          
+
+      </form>
+    </div>
+    <!-- footer-->
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#popupBasic" class="ui-btn-active" data-rel="popup" data-transition="pop">Info</a></li>
+        </ul>
+      </div>
+    </div>
+<!-- popup-->
+    <div data-role="popup" id="popupBasic" align="center">
+      <p>For more informations ask:<a href="https://github.com/dlugi57" class="ui-link">dlugi57</a></p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+
 </html>
