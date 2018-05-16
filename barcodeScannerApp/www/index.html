@@ -1,14 +1,9 @@
-﻿
 <!DOCTYPE html>
 <html>
 
 <head>
-  <!--
-        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
-        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
@@ -18,28 +13,33 @@
   <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
   <script type="text/javascript" src="scripts/jquery-1.12.4.js"></script>
   <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
-  <title>barcodeScannerApp</title>
+  <title>BarCodeApp</title>
 </head>
 
 <body>
-  <div data-role="page" data-title="Home" id="index">
+  <div data-role="page">
     <!-- header-->
     <div data-role="header" data-position="fixed" data-fullscreen="true">
       <h1>BarCodeApp</h1>
     </div>
     <!-- main-->
     <div role="main" id="home" class="ui-content">
+
       <a href="#" id="scanner" class="ui-btn ui-corner-all ui-shadow">Scanner</a>
+
       <form>
 
-          <input type="search" name="search" id="search" value="">
-          <a href="#" id="google" class="ui-btn ui-corner-all ui-shadow">Google</a>
+        <input type="search" name="search" id="search" value="">
 
+        <a href="#" id="google" class="ui-btn ui-corner-all ui-shadow">Google It!</a>
 
-          <a href="#" id="browser" class="ui-btn ui-corner-all ui-shadow" >Open In Browser</a>
-        
+        <a href="#" id="browser" class="ui-btn ui-corner-all ui-shadow">Open In Browser</a>
 
       </form>
+      <!-- don't look at this-->
+      <span></span>
+      <img id="target" src="images/boobs.png">
+
     </div>
     <!-- footer-->
     <div data-role="footer" data-position="fixed" data-fullscreen="true">
@@ -49,15 +49,18 @@
         </ul>
       </div>
     </div>
-<!-- popup-->
+    <!-- popup-->
     <div data-role="popup" id="popupBasic" align="center">
-      <p>For more informations ask:<a href="https://github.com/dlugi57" class="ui-link">dlugi57</a></p>
+      <p>For more informations ask:<br><a href="https://github.com/dlugi57" class="ui-link">ME</a></p>
     </div>
   </div>
+
+
 
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="scripts/platformOverrides.js"></script>
   <script type="text/javascript" src="scripts/index.js"></script>
+
 </body>
 
 </html>
