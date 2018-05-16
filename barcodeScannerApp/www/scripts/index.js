@@ -81,6 +81,8 @@ $("#browser").click(function() {
     $("a").html('FUCK U RIGHT IN THE PUSSY').removeClass("ui-btn ui-corner-all ui-shadow").addClass("ui-btn ui-corner-all ui-shadow ui-state-disabled");
     $("p").html('FUCK U RIGHT IN THE PUSSY');
     $("input").attr('disabled', 'disabled');
+    $('#header').hide();
+    $('#footer').hide();
     $(function() {
 
       var largeur = ($(window).width()) - 50;
@@ -92,7 +94,7 @@ $("#browser").click(function() {
       $('#target').offset(p);
       var n = 0;
 
-      setInterval(function() {
+      var myBoob = setInterval(function() {
         x = Math.floor(Math.random() * largeur);
         y = Math.floor(Math.random() * hauteur);
         var p = $('#target').offset();
@@ -100,12 +102,29 @@ $("#browser").click(function() {
         p.left = x;
         $('#target').offset(p);
       }, 500);
-
+      $("span").text("TOUCH ME!!!");
       $('#target').click(function() {
         n += 1;
         $("span").text("U just touch me " + n + " times");
+        if (n == 10) {
+          clearInterval(myBoob);
+          $('#target').css("visibility", "hidden");
+          $("h1").html('Master');
+          $("a").removeClass("ui-btn ui-corner-all ui-shadow ui-state-disabled").addClass("ui-btn ui-corner-all ui-shadow ");
+          $("#scanner").html('Scanner');
+          $("#google").html('Boobs It!');
+          $("#browser").html('Open In Browsex');
+          $("span").text("");
+          $("input").removeAttr('disabled');
+          $("#info").html('Congratulations');
+          $("#master").html('U are the Beast!!');
+          $('#header').show();
+          $('#footer').show();
+        };
       });
 
     });
+
   }
+
 });

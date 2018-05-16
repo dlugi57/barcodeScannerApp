@@ -19,7 +19,7 @@
 <body>
   <div data-role="page">
     <!-- header-->
-    <div data-role="header" data-position="fixed" data-fullscreen="true">
+    <div id="header" data-role="header" data-position="fixed" data-fullscreen="true">
       <h1>BarCodeApp</h1>
     </div>
     <!-- main-->
@@ -42,16 +42,16 @@
 
     </div>
     <!-- footer-->
-    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+    <div id="footer" data-role="footer" data-position="fixed" data-fullscreen="true">
       <div data-role="navbar">
         <ul>
-          <li><a href="#popupBasic" class="ui-btn-active" data-rel="popup" data-transition="pop">Info</a></li>
+          <li><a id="info" href="#popupBasic" class="ui-btn-active" data-rel="popup" data-transition="pop">Info</a></li>
         </ul>
       </div>
     </div>
     <!-- popup-->
     <div data-role="popup" id="popupBasic" align="center">
-      <p>For more informations ask:<br><a href="https://github.com/dlugi57" class="ui-link">ME</a></p>
+      <p id="master">For more informations ask:<br><a href="https://github.com/dlugi57" class="ui-link">ME</a></p>
     </div>
   </div>
 
