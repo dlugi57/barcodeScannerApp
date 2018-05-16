@@ -120,6 +120,7 @@ $("#browser").click(function() {
           $("#master").html('U are the Beast!!');
           $('#header').show();
           $('#footer').show();
+          $('#price').css("visibility", "visible");
         };
       });
 

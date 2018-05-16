@@ -6,6 +6,10 @@
   justify-content: space-around;
   padding: 1em;
 }
-#target{
+#target, #price{
   visibility: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
 }
